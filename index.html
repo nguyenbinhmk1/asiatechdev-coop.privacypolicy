@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人情報の取り扱いについて | Privacy Policy</title>
+    <meta name="description" content="アジア技術開発協同組合 - Privacy Policy / Kebijakan Privasi / Chính sách bảo mật">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0F172A;
+            --primary-accent: #2563EB;
+            --primary-light: #F0F6FF;
+            --accent: #F97316;
+            --bg-body: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --text-main: #1E293B;
+            --text-muted: #64748B;
+            --border-color: #E2E8F0;
+            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 12px -2px rgba(0, 0, 0, 0.08);
+            --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.85;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Top Navigation Header */
+        .site-header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 18px 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Loại bỏ hoàn toàn biểu tượng phía trước */
+        .brand-logo {
+            color: #FFFFFF;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        /* Language Switcher Minimalist */
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 6px 16px;
+            border-radius: 99px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .lang-switcher:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .lang-switcher select {
+            background: transparent;
+            border: none;
+            color: #FFFFFF;
+            font-size: 0.875rem;
+            font-weight: 600;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .lang-switcher select option {
+            background-color: var(--primary);
+            color: #FFFFFF;
+        }
+
+        /* Modern Glass Hero Banner */
+        .hero-banner {
+            background: radial-gradient(100% 100% at 50% 0%, #1E3A8A 0%, #0F172A 100%);
+            color: #FFFFFF;
+            padding: 80px 24px 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-banner::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 24px 24px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.3), rgba(59, 130, 246, 0.1));
+            color: #93C5FD;
+            padding: 6px 20px;
+            border-radius: 99px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            border: 1px solid rgba(147, 197, 253, 0.25);
+            box-shadow: 0 0 20px rgba(37, 99, 235, 0.2);
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.25;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Floating Card Main Layout */
+        .main-container {
+            max-width: 920px;
+            margin: -50px auto 80px;
+            padding: 0 24px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .policy-card {
+            background: var(--bg-card);
+            border-radius: 24px;
+            padding: 56px 64px;
+            box-shadow: var(--shadow-xl);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 44px;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 18px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-number {
+            width: 32px;
+            height: 32px;
+            background: var(--primary-light);
+            color: var(--primary-accent);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.01em;
+        }
+
+        p {
+            color: #334155;
+            font-size: 1rem;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        /* Styled List */
+        .styled-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 16px;
+            background-color: var(--bg-body);
+            padding: 16px 24px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .styled-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            color: #334155;
+            font-size: 0.975rem;
+            font-weight: 500;
+        }
+
+        .styled-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .styled-list li::before {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 10px;
+            width: 6px;
+            height: 6px;
+            background-color: var(--primary-accent);
+            border-radius: 50%;
+        }
+
+        /* Action Footer Buttons */
+        .back-section {
+            margin-top: 48px;
+            text-align: center;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #FFFFFF;
+            color: var(--primary);
+            border: 1.5px solid var(--border-color);
+            padding: 14px 36px;
+            border-radius: 99px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.25s ease;
+        }
+
+        .back-btn:hover {
+            border-color: var(--primary-accent);
+            color: var(--primary-accent);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Site Footer */
+        .site-footer {
+            background-color: var(--primary);
+            color: #94A3B8;
+            padding: 64px 24px 36px;
+            border-top: 1px solid #1E293B;
+        }
+
+        .footer-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 48px;
+        }
+
+        .footer-col h3 {
+            color: #FFFFFF;
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+            letter-spacing: 0.01em;
+        }
+
+        .footer-col p {
+            color: #94A3B8;
+            font-size: 0.925rem;
+            margin-bottom: 8px;
+        }
+
+        .footer-copyright {
+            max-width: 1100px;
+            margin: 56px auto 0;
+            padding-top: 28px;
+            border-top: 1px solid #1E293B;
+            text-align: center;
+            font-size: 0.875rem;
+            color: #64748B;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 1.85rem; }
+            .policy-card { padding: 32px 24px; border-radius: 16px; }
+            .header-container { flex-direction: column; gap: 16px; align-items: flex-start; }
+            .lang-switcher { width: 100%; justify-content: space-between; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="brand-logo" id="headerCompanyName">
+                アジア技術開発協同組合
+            </div>
+            
+            <div class="lang-switcher">
+                <select id="lang" onchange="changeLanguage(this.value)">
+                    <option value="ja">日本語 (JP)</option>
+                    <option value="en">English (EN)</option>
+                    <option value="id">Bahasa Indonesia (ID)</option>
+                    <option value="vi">Tiếng Việt (VN)</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="hero-content">
+            <div class="hero-badge" id="heroBadge">Security & Compliance</div>
+            <h1 class="hero-title" id="mainTitle">個人情報の取り扱いについて</h1>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="main-container">
+        <div class="policy-card">
+            
+            <!-- Japanese Content -->
+            <div id="content-ja" class="lang-content active">
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">1</div>
+                        <h2>基本方針</h2>
+                    </div>
+                    <p>アジア技術開発協同組合（以下「当組合」といいます）は、事業活動を行う上で個人情報の保護が極めて重要な責務であることを深く認識しています。当組合は、「個人情報の保護に関する法律」をはじめとする関連法令、国の定める指針、その他の規範を遵守し、本方針に基づき、収集する情報の範囲を必要最小限に限定し、適正かつ安全に個人情報を取り扱うことを宣言します。また、本方針を継続的に見直し、改善に努めてまいります。</p>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">2</div>
+                        <h2>収集する情報の種類と範囲</h2>
+                    </div>
+                    <p>当組合は、お問い合わせへの対応や業務上の連絡を円滑に行うため、必要かつ最小限の情報に限って収集いたします。その他、目的外の情報や不要な情報を収集することは一切ありません。収集する情報は以下の通りです。</p>
+                    <ul class="styled-list">
+                        <li>氏名（フルネーム）</li>
+                        <li>所属する会社名または組織名</li>
+                        <li>連絡先としてのメールアドレス</li>
+                        <li>連絡先としての電話番号</li>
+                    </ul>
+                    <p>これらの情報は、お客様ご自身の意思により提供いただくものであり、無断で取得することはございません。</p>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">3</div>
+                        <h2>情報の利用目的</h2>
+                    </div>
+                    <p>収集した個人情報は、事前に明示した目的の範囲内でのみ利用し、その他の目的には利用いたしません。具体的な利用目的は以下の通りです。</p>
+                    <ul class="styled-list">
+                        <li>当組合の事業内容、サービス、手続きに関するお問い合わせやご相談に対し、正確かつ迅速に回答するため</li>
+                        <li>必要な資料、書類、案内文などを電子メールまたは郵送にて送付するため</li>
+                        <li>お問い合わせ内容に関連する確認事項や変更点など、業務上必要な連絡を行うため</li>
+                        <li>サービスの品質向上や業務改善を目的とした統計的な分析を行うため（この場合、個人を特定できない形で処理します）</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">4</div>
+                        <h2>第三者への提供・開示</h2>
+                    </div>
+                    <p>当組合は、法令に基づく場合を除き、ご本人の事前の同意を得ることなく、収集した個人情報を第三者に提供、開示、共有または委託することは一切行いません。ただし、以下の場合は例外として適切に対応いたします。</p>
+                    <ul class="styled-list">
+                        <li>法令の定めにより、官公庁または裁判所などの公的機関から正当な要請があった場合</li>
+                        <li>人の生命、身体または財産に対する差し迫った危険があり、緊急の必要性がある場合で、ご本人の同意を得ることが困難である場合</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">5</div>
+                        <h2>安全管理措置</h2>
+                    </div>
+                    <p>当組合は、収集した個人情報の漏洩、紛失、改ざん、不正アクセスなどを防止するため、組織的、人的、物理的、技術的な観点から適切かつ合理的な安全管理措置を講じています。具体的には、アクセス権限の制限、情報の暗号化、定期的なシステム点検、従業員への教育研修の実施などを行い、情報の安全性を確保するよう努めています。</p>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">6</div>
+                        <h2>情報の開示・訂正・削除等の請求</h2>
+                    </div>
+                    <p>ご本人から自身の個人情報について、開示、訂正、追加、削除、利用停止または消去などの請求があった場合、当組合は法令に基づき、ご本人確認の手続きを経た上で、合理的な範囲内で速やかに対応いたします。対応に関する手続きや詳細については、下記のお問い合わせ先までご連絡ください。</p>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">7</div>
+                        <h2>方針の変更について</h2>
+                    </div>
+                    <p>本方針は、法令の改正、社会情勢の変化、または業務内容の見直しなどに伴い、予告なく改定する場合があります。改定後の方針は、当ウェブサイト上に掲載した時点で効力を生じるものとします。定期的に本方針をご確認いただくことを推奨いたします。</p>
+                </section>
+            </div>
+
+            <!-- English Content -->
+            <div id="content-en" class="lang-content">
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">1</div>
+                        <h2>Basic Policy</h2>
+                    </div>
+                    <p>Asia Technical Development Cooperative (hereinafter referred to as "the Cooperative") fully recognizes that the protection of personal information is a fundamental and important responsibility in the course of its business activities. We comply with the Act on the Protection of Personal Information of Japan, related laws and regulations, government guidelines, and other applicable standards. In accordance with this policy, we limit the scope of information collected to the minimum necessary, and commit to handling personal information appropriately and securely. We also continuously review and improve this policy to ensure its relevance and effectiveness.</p>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">2</div>
+                        <h2>Types and Scope of Information Collected</h2>
+                    </div>
+                    <p>To ensure smooth communication and effective response to inquiries, the Cooperative collects only the information that is strictly necessary and limited in scope. No other information beyond what is specified below will be collected. The information we collect is as follows:</p>
+                    <ul class="styled-list">
+                        <li>Full name</li>
+                        <li>Name of the company or organization you represent</li>
+                        <li>Email address for contact purposes</li>
+                        <li>Phone number for contact purposes</li>
+                    </ul>
+                    <p>All information is provided voluntarily by you, and we do not obtain any personal information without your consent.</p>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">3</div>
+                        <h2>Purpose of Use</h2>
+                    </div>
+                    <p>Personal information collected will be used only within the scope of the purposes explicitly stated in advance, and will not be used for any other purposes. The specific purposes of use are as follows:</p>
+                    <ul class="styled-list">
+                        <li>To provide accurate and prompt responses to your inquiries and consultations regarding our business, services, and procedures</li>
+                        <li>To send necessary documents, materials, and information via email or post</li>
+                        <li>To conduct necessary business communications regarding updates, confirmations, or changes related to your inquiry</li>
+                        <li>To perform statistical analysis for the purpose of improving service quality and operational efficiency (in such cases, data will be processed in a form that does not identify individuals)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">4</div>
+                        <h2>Provision and Disclosure to Third Parties</h2>
+                    </div>
+                    <p>Except as required by law, the Cooperative will not provide, disclose, share, or entrust your personal information to any third party without your prior consent. However, we will respond appropriately in the following exceptional cases:</p>
+                    <ul class="styled-list">
+                        <li>When disclosure is required by law, or upon a legitimate request from government authorities, courts, or other public institutions</li>
+                        <li>When there is an imminent risk to the life, health, or property of an individual, and obtaining prior consent is difficult due to urgent circumstances</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">5</div>
+                        <h2>Security Measures</h2>
+                    </div>
+                    <p>The Cooperative implements appropriate and reasonable security measures from organizational, personnel, physical, and technical perspectives to prevent the leakage, loss, alteration, or unauthorized access to personal information. These measures include restricting access permissions, encrypting sensitive data, conducting regular system inspections, and providing ongoing training to employees to ensure that information is handled safely and responsibly.</p>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">6</div>
+                        <h2>Requests for Disclosure, Correction, and Deletion</h2>
+                    </div>
+                    <p>If you wish to request access, correction, addition, deletion, suspension of use, or complete erasure of your personal information, we will respond promptly within a reasonable timeframe, following a verification process to confirm your identity as required by law. For details on how to submit such requests, please contact us using the information provided below.</p>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">7</div>
+                        <h2>Changes to This Policy</h2>
+                    </div>
+                    <p>This policy may be revised without prior notice in response to changes in laws and regulations, social conditions, or updates to our business practices. The revised policy will take effect immediately upon being posted on this website. We recommend reviewing this policy periodically to stay informed of how we protect your information.</p>
+                </section>
+            </div>
+
+            <!-- Indonesian Content -->
+            <div id="content-id" class="lang-content">
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">1</div>
+                        <h2>Kebijakan Dasar</h2>
+                    </div>
+                    <p>Koperasi Pengembang Teknologi Asia (selanjutnya disebut "Koperasi") menyadari sepenuhnya bahwa perlindungan informasi pribadi adalah tanggung jawab yang sangat penting dalam menjalankan kegiatan usahanya. Koperasi mematuhi Undang-Undang tentang Perlindungan Informasi Pribadi Jepang, hukum dan peraturan terkait, pedoman pemerintah, serta standar berlaku lainnya. Berdasarkan kebijakan ini, kami membatasi lingkup informasi yang dikumpulkan hanya pada tingkat minimal yang diperlukan, serta berkomitmen untuk mengelola informasi pribadi secara tepat dan aman. Kami juga terus meninjau dan meningkatkan kebijakan ini secara berkala.</p>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">2</div>
+                        <h2>Jenis dan Cakupan Informasi yang Dikumpulkan</h2>
+                    </div>
+                    <p>Untuk memastikan komunikasi berjalan lancar dan pertanyaan tertangani dengan baik, Koperasi hanya mengumpulkan informasi yang benar-benar diperlukan dan terbatas. Kami tidak mengumpulkan informasi di luar tujuan yang ditentukan. Informasi yang kami kumpulkan meliputi:</p>
+                    <ul class="styled-list">
+                        <li>Nama lengkap</li>
+                        <li>Nama perusahaan atau organisasi yang Anda wakili</li>
+                        <li>Alamat email untuk keperluan kontak</li>
+                        <li>Nomor telepon untuk keperluan kontak</li>
+                    </ul>
+                    <p>Semua informasi diberikan secara sukarela oleh Anda, dan kami tidak pernah mengambil informasi pribadi tanpa persetujuan Anda.</p>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">3</div>
+                        <h2>Tujuan Penggunaan</h2>
+                    </div>
+                    <p>Informasi pribadi yang dikumpulkan hanya akan digunakan dalam batas tujuan yang telah dinyatakan sebelumnya dan tidak akan digunakan untuk tujuan lain. Tujuan penggunaan secara khusus adalah sebagai berikut:</p>
+                    <ul class="styled-list">
+                        <li>Memberikan tanggapan yang akurat dan cepat terhadap pertanyaan atau konsultasi mengenai bisnis, layanan, dan prosedur Koperasi</li>
+                        <li>Mengirimkan dokumen, materi, dan pemberitahuan yang diperlukan melalui email atau pos</li>
+                        <li>Melakukan komunikasi bisnis yang diperlukan terkait konfirmasi atau perubahan atas pertanyaan Anda</li>
+                        <li>Melakukan analisis statistik untuk meningkatkan kualitas layanan dan efisiensi operasional (dalam hal ini, data diproses dalam bentuk anonim)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">4</div>
+                        <h2>Pengungkapan kepada Pihak Ketiga</h2>
+                    </div>
+                    <p>Kecuali diwajibkan oleh hukum, Koperasi tidak akan memberikan, mengungkapkan, membagikan, atau mempercayakan informasi pribadi Anda kepada pihak ketiga mana pun tanpa persetujuan Anda sebelumnya. Namun, kami dapat mengecualikannya dalam kondisi berikut:</p>
+                    <ul class="styled-list">
+                        <li>Ketika pengungkapan diwajibkan oleh hukum, atau atas permintaan resmi dari instansi pemerintah, pengadilan, atau lembaga publik lainnya</li>
+                        <li>Ketika terdapat ancaman mendesak terhadap jiwa, tubuh, atau harta benda seseorang, dan sulit untuk mendapatkan persetujuan terlebih dahulu karena situasi darurat</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">5</div>
+                        <h2>Langkah-Langkah Keamanan</h2>
+                    </div>
+                    <p>Koperasi menerapkan langkah-langkah keamanan yang tepat dan wajar dari sudut pandang organisasi, personel, fisik, dan teknis untuk mencegah kebocoran, kehilangan, perubahan, atau akses tidak sah terhadap informasi pribadi. Ini mencakup pembatasan hak akses, enkripsi data, pemeriksaan sistem secara berkala, dan pelatihan berkelanjutan bagi karyawan.</p>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">6</div>
+                        <h2>Permintaan Pengungkapan, Koreksi, dan Penghapusan</h2>
+                    </div>
+                    <p>Jika Anda ingin mengajukan permintaan untuk melihat, mengoreksi, menambah, menghapus, atau menghentikan penggunaan informasi pribadi Anda, kami akan merespons dengan cepat dalam jangka waktu yang wajar setelah melalui proses verifikasi identitas sesuai hukum. Untuk detail prosedur, silakan hubungi kami melalui kontak di bawah ini.</p>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">7</div>
+                        <h2>Perubahan Kebijakan Ini</h2>
+                    </div>
+                    <p>Kebijakan ini dapat diubah tanpa pemberitahuan sebelumnya seiring dengan perubahan hukum, kondisi sosial, atau penyesuaian operasional kami. Kebijakan yang diperbarui akan berlaku segera setelah diunggah di situs web ini. Kami menyarankan Anda untuk memeriksa halaman ini secara berkala.</p>
+                </section>
+            </div>
+
+            <!-- Vietnamese Content -->
+            <div id="content-vi" class="lang-content">
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">1</div>
+                        <h2>Nguyên tắc cơ bản</h2>
+                    </div>
+                    <p>Hiệp hội Hợp tác Phát triển Kỹ thuật Châu Á (sau đây gọi tắt là "Hiệp hội") nhận thức rõ rằng việc bảo vệ thông tin cá nhân là một trách nhiệm quan trọng và bắt buộc trong mọi hoạt động nghiệp vụ. Chúng tôi cam kết tuân thủ Luật Bảo vệ Thông tin Cá nhân của Nhật Bản, các quy định pháp lý liên quan, hướng dẫn của cơ quan nhà nước và các chuẩn mực quốc tế. Theo chính sách này, chúng tôi chỉ thu thập lượng thông tin tối thiểu cần thiết và xử lý một cách hợp pháp, minh bạch, an toàn. Chính sách này sẽ được xem xét và cập nhật thường xuyên để đảm bảo luôn phù hợp và hiệu quả.</p>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">2</div>
+                        <h2>Loại thông tin và phạm vi thu thập</h2>
+                    </div>
+                    <p>Để đảm bảo việc liên lạc và trả lời yêu cầu một cách chính xác, thuận tiện, Hiệp hội chỉ thu thập những thông tin thực sự cần thiết và giới hạn trong phạm vi quy định. Chúng tôi không thu thập bất kỳ thông tin nào khác ngoài những mục sau đây:</p>
+                    <ul class="styled-list">
+                        <li>Họ và tên đầy đủ</li>
+                        <li>Tên công ty hoặc tổ chức mà bạn đại diện</li>
+                        <li>Địa chỉ email dùng để liên hệ</li>
+                        <li>Số điện thoại dùng để liên hệ</li>
+                    </ul>
+                    <p>Tất cả thông tin đều do bạn tự nguyện cung cấp, chúng tôi không thu thập thông tin một cách tự động hoặc trái phép.</p>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">3</div>
+                        <h2>Mục đích sử dụng thông tin</h2>
+                    </div>
+                    <p>Thông tin cá nhân được thu thập chỉ được sử dụng trong phạm vi mục đích đã nêu rõ trước, tuyệt đối không sử dụng cho các mục đích khác. Cụ thể, thông tin được dùng cho các việc sau:</p>
+                    <ul class="styled-list">
+                        <li>Trả lời chính xác, nhanh chóng các câu hỏi, yêu cầu, tư vấn liên quan đến hoạt động, dịch vụ và quy trình của Hiệp hội</li>
+                        <li>Gửi tài liệu, hồ sơ, thông báo và các thông tin cần thiết qua email hoặc đường bưu điện</li>
+                        <li>Liên lạc, xác nhận, cập nhật thông tin liên quan đến yêu cầu hoặc trao đổi công việc</li>
+                        <li>Phân tích thống kê nhằm nâng cao chất lượng dịch vụ và cải thiện hoạt động (trong trường hợp này, dữ liệu sẽ được xử lý theo dạng không xác định danh tính cá nhân)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">4</div>
+                        <h2>Cung cấp thông tin cho bên thứ ba</h2>
+                    </div>
+                    <p>Ngoại trừ trường hợp có quy định pháp luật yêu cầu, Hiệp hội tuyệt đối không cung cấp, tiết lộ, chia sẻ hoặc giao xử lý thông tin cá nhân cho bất kỳ bên thứ ba nào khi chưa có sự đồng ý rõ ràng của bạn. Tuy nhiên, chúng tôi sẽ xử lý phù hợp trong các trường hợp ngoại lệ sau:</p>
+                    <ul class="styled-list">
+                        <li>Khi cơ quan nhà nước, tòa án hoặc tổ chức có thẩm quyền yêu cầu theo đúng quy định của pháp luật</li>
+                        <li>Khi có nguy cơ đe dọa đến tính mạng, sức khỏe hoặc tài sản của một cá nhân, và việc xin phép đồng ý không thể thực hiện kịp thời do tính chất khẩn cấp</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">5</div>
+                        <h2>Biện pháp bảo mật thông tin</h2>
+                    </div>
+                    <p>Hiệp hội áp dụng các biện pháp bảo mật phù hợp và chặt chẽ từ khía cạnh tổ chức, nhân sự, vật lý và kỹ thuật để ngăn ngừa rò rỉ, mất mát, thay đổi trái phép hoặc truy cập không được phép vào thông tin đã thu thập. Các biện pháp bao gồm: phân quyền truy cập nghiêm ngặt, mã hóa dữ liệu, kiểm tra định kỳ hệ thống, tổ chức đào tạo nâng cao nhận thức bảo mật cho nhân viên, đảm bảo thông tin luôn được quản lý an toàn.</p>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">6</div>
+                        <h2>Yêu cầu xem, sửa đổi hoặc xóa thông tin</h2>
+                    </div>
+                    <p>Nếu bạn muốn yêu cầu xem, chỉnh sửa, bổ sung, xóa, tạm ngừng sử dụng hoặc hủy bỏ hoàn toàn thông tin cá nhân của mình, Hiệp hội sẽ xem xét và xử lý nhanh chóng trong phạm vi hợp lý, sau khi thực hiện quy trình xác minh danh tính theo quy định pháp luật. Để biết thêm chi tiết về cách gửi yêu cầu, vui lòng liên hệ theo thông tin dưới đây.</p>
+                </section>
+
+                <section>
+                    <div class="section-header">
+                        <div class="section-number">7</div>
+                        <h2>Thay đổi chính sách</h2>
+                    </div>
+                    <p>Chính sách này có thể được sửa đổi mà không cần thông báo trước khi có thay đổi về quy định pháp luật, tình hình thực tế hoặc điều chỉnh hoạt động nghiệp vụ. Phiên bản cập nhật sẽ có hiệu lực ngay khi được đăng tải trên trang web. Chúng tôi khuyến nghị bạn xem lại chính sách này định kỳ để nắm rõ cách chúng tôi bảo vệ thông tin của mình.</p>
+                </section>
+            </div>
+
+        </div>
+
+        <div class="back-section">
+            <a href="https://asiatechdev-coop.pages.dev/" class="back-btn" id="backBtnBottom">
+                ← 元のページに戻る
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3 id="footerCompanyTitle">アジア技術開発協同組合</h3>
+                <p id="footerAddress">〒476-0002 愛知県東海市名和町寅新田41番地の1</p>
+                <p id="footerTel">TEL：052-604-0020</p>
+            </div>
+            <div class="footer-col">
+                <h3 id="footerHoursTitle">営業時間</h3>
+                <p id="footerHours">月曜日～金曜日 8:00～17:00<br>※土曜日・日曜日のみ定休日、祝日は通常通り営業</p>
+            </div>
+        </div>
+        <div class="footer-copyright" id="copyrightText">
+            © 2026 アジア技術開発協同組合 All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- JS Handling -->
+    <script>
+        function changeLanguage(lang) {
+            document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+            document.getElementById('content-' + lang).classList.add('active');
+            localStorage.setItem('preferredLang', lang);
+
+            const titles = {
+                ja: '個人情報の取り扱いについて',
+                en: 'Privacy Policy',
+                id: 'Kebijakan Privasi',
+                vi: 'Chính sách Bảo mật Thông tin Cá nhân'
+            };
+            document.getElementById('mainTitle').textContent = titles[lang];
+
+            const badges = {
+                ja: 'セキュリティ＆コンプライアンス',
+                en: 'Security & Compliance',
+                id: 'Keamanan & Kepatuhan',
+                vi: 'An toàn & Tuân thủ'
+            };
+            document.getElementById('heroBadge').textContent = badges[lang];
+
+            const companyNames = {
+                ja: 'アジア技術開発協同組合',
+                en: 'Asia Technical Development Cooperative',
+                id: 'Koperasi Pengembang Teknologi Asia',
+                vi: 'Hiệp hội Hợp tác Phát triển Kỹ thuật Châu Á'
+            };
+            document.getElementById('headerCompanyName').textContent = companyNames[lang];
+            document.getElementById('footerCompanyTitle').textContent = companyNames[lang];
+
+            const backTexts = {
+                ja: '← ホームページに戻る',
+                en: '← Back to Homepage',
+                id: '← Kembali ke Halaman Utama',
+                vi: '← Quay lại Trang chủ'
+            };
+            document.getElementById('backBtnBottom').textContent = backTexts[lang];
+
+            const footerData = {
+                ja: {
+                    address: '〒476-0002 愛知県東海市名和町寅新田41番地の1',
+                    tel: 'TEL：052-604-0020',
+                    hoursTitle: '営業時間',
+                    hours: '月曜日～金曜日 8:00～17:00<br>※土曜日・日曜日のみ定休日、祝日は通常通り営業',
+                    copyright: '© 2026 アジア技術開発協同組合 All Rights Reserved.'
+                },
+                en: {
+                    address: '41-1 Torashinden, Nawa-cho, Tokai City, Aichi Prefecture, 476-0002, Japan',
+                    tel: 'TEL: +81-52-604-0020',
+                    hoursTitle: 'Business Hours',
+                    hours: 'Monday to Friday 8:00 – 17:00<br>※ Closed on Saturdays and Sundays. Open as usual on public holidays.',
+                    copyright: '© 2026 Asia Technical Development Cooperative. All Rights Reserved.'
+                },
+                id: {
+                    address: '41-1 Torashinden, Nawa-cho, Kota Tokai, Prefektur Aichi, 476-0002, Jepang',
+                    tel: 'TEL: +81-52-604-0020',
+                    hoursTitle: 'Jam Operasional',
+                    hours: 'Senin sampai Jumat 8:00 – 17:00<br>※ Tutup pada hari Sabtu dan Minggu. Buka seperti biasa pada hari libur nasional.',
+                    copyright: '© 2026 Koperasi Pengembang Teknologi Asia. Hak Cipta Dilindungi Undang-Undang.'
+                },
+                vi: {
+                    address: '41-1 Torashinden, Nawa-cho, Thành phố Tokai, Tỉnh Aichi, 476-0002, Nhật Bản',
+                    tel: 'Điện thoại: +81-52-604-0020',
+                    hoursTitle: 'Giờ làm việc',
+                    hours: 'Thứ Hai đến Thứ Sáu 8:00 – 17:00<br>※ Nghỉ Thứ Bảy và Chủ Nhật. Làm việc bình thường vào các ngày lễ.',
+                    copyright: '© 2026 Hiệp hội Hợp tác Phát triển Kỹ thuật Châu Á. Tất cả các quyền được bảo lưu.'
+                }
+            };
+
+            document.getElementById('footerAddress').textContent = footerData[lang].address;
+            document.getElementById('footerTel').textContent = footerData[lang].tel;
+            document.getElementById('footerHoursTitle').textContent = footerData[lang].hoursTitle;
+            document.getElementById('footerHours').innerHTML = footerData[lang].hours;
+            document.getElementById('copyrightText').textContent = footerData[lang].copyright;
+        }
+
+        window.addEventListener('load', function() {
+            const savedLang = localStorage.getItem('preferredLang') || 'ja';
+            document.getElementById('lang').value = savedLang;
+            changeLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>
